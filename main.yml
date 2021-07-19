@@ -1,0 +1,12 @@
+
+---
+# Windows update
+
+- include_tasks: win-updates.yml
+  vars:
+    category_names:
+      - CriticalUpdates
+      - SecurityUpdates
+      - UpdateRollups
+
+- include_tasks: win-reboot.yml

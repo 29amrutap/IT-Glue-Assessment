@@ -1,0 +1,5 @@
+---
+- name: Rebooting Server
+  win_reboot:
+    shutdown_timeout: 4000
+    reboot_timeout: 4000
