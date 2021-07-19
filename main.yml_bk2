@@ -1,0 +1,10 @@
+---
+- name: Update windows servers
+  hosts: windows_servers
+  remote_user: root
+
+  tasks:
+  - name: Install all updates
+    ansible.windows.win_updates:
+      category_names: '*'
+      reboot: yes

@@ -1,12 +1,13 @@
 
 ---
-# Windows update
+- name: Windows update
+  hosts: windows_servers
+  tasks:
+    - include_tasks: win-update.yml
+      vars:
+        category_names:
+           - CriticalUpdates
+           - SecurityUpdates
+           - UpdateRollups
 
-- include_tasks: win-updates.yml
-  vars:
-    category_names:
-      - CriticalUpdates
-      - SecurityUpdates
-      - UpdateRollups
-
-- include_tasks: win-reboot.yml
+    - include_tasks: win-reboot.yml
