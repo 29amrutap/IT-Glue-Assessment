@@ -10,7 +10,7 @@ pipeline {
         stage('update') {
             steps {
                 git branch: 'main', url: 'https://github.com/29amrutap/IT-Glue-Assessment.git'
-                sh "ansible-playbook windows_update.yml -i hosts --extra-vars '{ansible_user=${params.user},ansible_password=${params.password}}' --limit ${params.host}"
+                sh "ansible-playbook windows_update.yml -i hosts --extra-vars "ansible_user=${params.user} ansible_password=${params.password}" --limit ${params.host}"
 
             }
 
