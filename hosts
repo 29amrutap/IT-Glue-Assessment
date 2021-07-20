@@ -1,8 +1,6 @@
-[win]
+[windows]
 15.222.250.75
-10.3.4.5
 
 [win:vars]
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
-
